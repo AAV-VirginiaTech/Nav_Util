@@ -412,55 +412,6 @@ public class LinkedList<T> {
         return new ListIterator();
     }
 
-
-    /**
-     * Sorts the list using an insertion sort technique
-     * using the given comparator to determine the order
-     * the nodes should be moved in.
-     *
-     * @param comparator
-     *            the comparator to use to sort
-     */
-    public void sort(Comparator<T> comparator) {
-        Node<T> unsortedPart = head.next.next;
-        // head.next.next = null <- causing NPE when supposed to add to end
-        // b/c tail deleted
-        head.next.linkWith(tail);
-        unsortedPart.prev = null;
-
-        while (unsortedPart.data != null) {
-            Node<T> nodeToInsert = unsortedPart;
-            unsortedPart = unsortedPart.next;
-
-            insertInOrder(nodeToInsert, comparator);
-
-        }
-
-    }
-
-
-    /**
-     * Inserts a given node based on how it should be compared
-     *
-     * @param nodeToInsert
-     *            the node that is inserted
-     * @param comparator
-     *            the type of comparison
-     */
-    private void insertInOrder(Node<T> nodeToInsert, Comparator<T> comparator) {
-        T item = nodeToInsert.data;
-        Node<T> currentNode = head.next;
-
-        while (currentNode != tail && comparator.compare(item,
-                currentNode.data) > 0) {
-            currentNode = currentNode.next;
-        }
-
-        nodeToInsert.insertAfter(currentNode.prev);
-
-    }
-
-
     /**
      * Writes the list to an array
      *
