@@ -68,9 +68,46 @@ public class WayPoint {
     public PointType getPointType() {
         return POINT_TYPE;
     }
+    
 
     /**
-     * @TODO    Implement the toString Method
-     * @TODO    Implement the Equals Method
+     * Creates a String representation of the WayPoint in the following format:
+     * Point Type: WAY   Lat: <lat>   Long: <long>  Height: <height>
+     *
+     * @Return  A string representing the WayPoint
      */
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Point Type: ");
+        sb.append(POINT_TYPE);
+        sb.append("   Lat: ");
+        sb.append(latitude);
+        sb.append("   Long: ");
+        sb.append(longitude);
+        sb.append("   Height: ");
+        sb.append(height);
+        sb.append("\n");
+        return sb.toString();
+    }
+
+    /**
+     * Determines of two Waypoints are equal. Waypoints are equal if they both have
+     * the same lat, long, and height.
+     *
+     * @return  true if they are equal otherwise false
+     */
+    public boolean equals(Object obj) {
+
+        if (obj == null) return false;
+        if (obj == this) return true;
+        if (obj.getClass() == WayPoint.class) {
+            WayPoint other = (WayPoint) obj;
+            return other.longitude == this.longitude &&
+                    other.latitude == this.latitude &&
+                    other.height == this.height;
+        } else {
+            return false;
+        }
+
+    }
 }

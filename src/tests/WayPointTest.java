@@ -61,7 +61,36 @@ class WayPointTest {
     }
 
     /**
-     * @TODO    Implement test for toString
-     * @TODO    Implement test for equals
+     * Tests the toString Method
      */
+    @Test
+    void testToString() {
+        String expected = "Point Type: WAY   Lat: 78.1321   Long: 34.1231   Height: 345.0\n";
+        assertEquals(expected, wp.toString());
+    }
+
+    /**
+     * Tests the equals method
+     */
+    @Test
+    void testEquals() {
+        WayPoint other = null;
+        assertFalse(wp.equals(other));
+
+        assertTrue(wp.equals(wp));
+
+        assertFalse(wp.equals("Other"));
+
+        other = new WayPoint(78.1211, 34.1231, 345);
+        assertFalse(wp.equals(other));
+
+        other = new WayPoint(78.1321, 34.1111, 345);
+        assertFalse(wp.equals(other));
+
+        other = new WayPoint(78.1321, 34.1231, 300);
+        assertFalse(wp.equals(other));
+
+        other = new WayPoint(78.1321, 34.1231, 345);
+        assertTrue(wp.equals(other));
+    }
 }
