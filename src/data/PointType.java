@@ -2,5 +2,6 @@ package data;
 
 public enum PointType {
     NAV,
-    WAY
+    WAY,
+    OBJ
 }
