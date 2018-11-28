@@ -1,4 +1,3 @@
-package sample;
 
 public class Product {
     private String label;
@@ -7,6 +6,7 @@ public class Product {
     private int height;
     private String type;
     private String primary;
+
     public Product(){
         this.label = "";
         this.lat = 0;
