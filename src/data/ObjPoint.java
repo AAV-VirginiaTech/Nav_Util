@@ -1,12 +1,12 @@
 package data;
 
-public class ObjPoint {
+abstract public class ObjPoint {
 
     /**
      * The Height of the ObjPoint
      * @TODO add what measurement for height
      */
-    private double height;
+    protected double height;
 
     /**
      * The latitude of the ObjPoint
