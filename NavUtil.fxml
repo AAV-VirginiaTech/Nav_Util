@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="694.0" prefWidth="823.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+    <MenuBar prefHeight="16.0" prefWidth="623.0" VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" text="New" />
+            <MenuItem mnemonicParsing="false" text="Open…" />
+            <Menu mnemonicParsing="false" text="Open Recent" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Close" />
+            <MenuItem mnemonicParsing="false" text="Save" />
+            <MenuItem mnemonicParsing="false" text="Save As…" />
+            <MenuItem mnemonicParsing="false" text="Revert" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Preferences…" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Quit" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Undo" />
+            <MenuItem mnemonicParsing="false" text="Redo" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Cut" />
+            <MenuItem mnemonicParsing="false" text="Copy" />
+            <MenuItem mnemonicParsing="false" text="Paste" />
+            <MenuItem mnemonicParsing="false" text="Delete" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Select All" />
+            <MenuItem mnemonicParsing="false" text="Unselect All" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" VBox.vgrow="ALWAYS">
+      <children>
+        <Label alignment="CENTER" layoutX="155.0" layoutY="177.0" style="&#10;" text="Drag components from Library here…" textAlignment="CENTER" textFill="#9f9f9f" wrapText="false">
+          <font>
+            <Font size="18.0" />
+          </font>
+        </Label>
+            <HBox layoutY="2.0">
+               <children>
+                  <Button mnemonicParsing="false" text="Settings" />
+               </children>
+            </HBox>
+            <TableView editable="true" layoutX="91.0" layoutY="320.0" prefHeight="315.0" prefWidth="646.0">
+              <columns>
+                <TableColumn prefWidth="129.0" text="Label" />
+                <TableColumn prefWidth="110.0" text="Lat" />
+                  <TableColumn prefWidth="121.0" text="Long" />
+                  <TableColumn prefWidth="143.0" text="Long" />
+                  <TableColumn prefWidth="142.0" text="Point Type" />
+              </columns>
+            </TableView>
+            <Button layoutX="129.0" layoutY="271.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="110.0" text="Add" />
+            <Button layoutX="254.0" layoutY="271.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="129.0" text="Remove" />
+            <Button layoutX="401.0" layoutY="271.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="129.0" text="Clear" />
+            <Button layoutX="545.0" layoutY="271.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="140.0" text="Export" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f7f8f8" height="232.0" layoutX="103.0" layoutY="27.0" stroke="BLACK" strokeType="INSIDE" width="596.0" />
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
